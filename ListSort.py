@@ -31,7 +31,6 @@ def partition(arr, low, high):
   
     arr[i+1], arr[high] = arr[high], arr[i+1]
     return (i+1)
-  
 # Function to do Quick sort
 def quickSort(arr, low, high):
     if len(arr) == 1:
@@ -46,14 +45,6 @@ def quickSort(arr, low, high):
         quickSort(arr, low, pi-1)
         quickSort(arr, pi+1, high)
         return arr
-        
-# Driver code for quicksort
-quick = list
-n = len(quick)
-quick = quickSort(quick, 0, n-1)
-print("Sorted array using quicksort is:", end=' ')
-for i in range(n):
-    print(quick[i], end=' ')
 
 # Feature #3 - Selection Sort - Devina
 def feature3(input):
@@ -69,3 +60,12 @@ def feature4(input):
 def feature5(input):
     #feature here
     return 
+
+
+# Driver code for quicksort
+quick = list
+n = len(quick)
+quick = quickSort(quick, 0, n-1)
+print("Sorted array using quicksort is:", end=' ')
+for i in range(n):
+    print(quick[i], end=' ')
