@@ -3,6 +3,7 @@
 This repo is a group exercise for COSC499. We start with a list of integers and each develope a sorting feature for it.
 
 ## Unit Testing in Python
+[Check the official documentation here](https://docs.python.org/3/library/unittest.html)
 
 1. Open terminal
 2. Navigate using `cd` to the directory that contains the class you want to test and your test class.
