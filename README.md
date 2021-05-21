@@ -1,1 +1,1 @@
-# GroupGitExcersize
+# GroupGitExercise
