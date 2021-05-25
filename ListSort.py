@@ -58,8 +58,21 @@ def feature4(input):
 
 # Feature #5 - Insertion Sort - Tasha
 def feature5(input):
-    #feature here
-    return 
+    temp = input
+
+    for element in range(1, len(temp)):
+        val = temp[element]         # current value
+        i = element                 # current index
+
+        # Move index to the right as long as it's not at the
+        # beginning of the list and that there is an element
+        # in the array that's bigger than the current value
+        while i > 0 and val < temp[i-1]:
+            temp[i] = temp[i-1]
+            i -= 1
+
+        temp[i] = val               # insert value at current index
+    return temp                     # return sorted list
 
 
 # Driver code for quicksort
@@ -69,3 +82,9 @@ quick = quickSort(quick, 0, n-1)
 print("Sorted array using quicksort is:", end=' ')
 for i in range(n):
     print(quick[i], end=' ')
+
+# Driver code for insertion sort
+insertionArr = feature5(list)
+print("\nSorted array using insertion sort is:", end=' ')
+for i in range(len(insertionArr)):
+    print(insertionArr[i], end=' ')
