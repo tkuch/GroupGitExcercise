@@ -13,18 +13,18 @@ list = [9, 11, 14, 25, 74, 23, 64, 99, 57, 86]
 def bubbleSort(arr):
     n = len(arr)
   
-    # Traverse through all array elements
+    # Iterate over all array elements (Except last)
     for i in range(n-1):
-    # range(n) also work but outer loop will repeat one time more than needed.
   
-        # Last i elements are already in place
+        # Each iteration adds a correct in place element to the end of the array
         for j in range(0, n-i-1):
   
-            # traverse the array from 0 to n-i-1
-            # Swap if the element found is greater
-            # than the next element
+            # Swap elements if the current element is smaller than the next element
             if arr[j] > arr[j+1] :
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+
     return arr
 
 # Feature #2 - Quick Sort - Joshua
