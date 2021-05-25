@@ -10,9 +10,22 @@ Created on Fri May 21 09:39:36 2021
 list = [9, 11, 14, 25, 74, 23, 64, 99, 57, 86]
 
 # Feature #1 - Bubble Sort - Luke
-def feature1(input):
-    #feature here
-    return 
+def bubbleSort(arr):
+    n = len(arr)
+  
+    # Iterate over all array elements (Except last)
+    for i in range(n-1):
+  
+        # Each iteration adds a correct in place element to the end of the array
+        for j in range(0, n-i-1):
+  
+            # Swap elements if the current element is smaller than the next element
+            if arr[j] > arr[j+1] :
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+
+    return arr
 
 # Feature #2 - Quick Sort - Joshua
 def partition(arr, low, high):
