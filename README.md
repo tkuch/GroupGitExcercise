@@ -2,6 +2,9 @@
 
 This repo is a group exercise for COSC499. We start with a list of integers and each develope a sorting feature for it based on sorting algorithms.
 
+### Bubble Sort
+Bubble Sort can be called using `bubbleSort(unsortedArray)`. This will take an unsorted array as input and return a sorted array in O(n^2) time.
+
 ### Quicksort
 To run the quicksort on the list simply call `quickSort(quick, 0, n-1)` where n-1 is the last element of the list. The function will return a sorted list using the quicksort algorithm.
 
