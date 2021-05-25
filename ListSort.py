@@ -61,11 +61,14 @@ def quickSort(arr, low, high):
 
 # Feature #3 - Selection Sort - Devina
 def feature3(arr):
+    #traverse the array
     for i in range(len(arr)):
+        #find the minimum element in the unsorted array
         min_idx = i
         for j in range(i + 1, len(arr)):
             if arr[min_idx] > arr[j]:
                 min_idx = j
+        #swap minimum element with the first element
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
 
