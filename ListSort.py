@@ -60,9 +60,17 @@ def quickSort(arr, low, high):
         return arr
 
 # Feature #3 - Selection Sort - Devina
-def feature3(input):
-    #feature here
-    return 
+def feature3(arr):
+    #traverse the array
+    for i in range(len(arr)):
+        #find the minimum element in the unsorted array
+        min_idx = i
+        for j in range(i + 1, len(arr)):
+            if arr[min_idx] > arr[j]:
+                min_idx = j
+        #swap minimum element with the first element
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
 
 # Feature #4 - Merge Sort - Tatiana
 def feature4(input):
@@ -101,3 +109,9 @@ insertionArr = feature5(list)
 print("\nSorted array using insertion sort is:", end=' ')
 for i in range(len(insertionArr)):
     print(insertionArr[i], end=' ')
+
+# Driver code for selection sort
+selectionArr = feature3(list)
+print("\nSorted array using selection sort is:", end=' ')
+for i in range(len(selectionArr)):
+    print(selectionArr[i], end=' ')

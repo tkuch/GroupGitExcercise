@@ -11,6 +11,9 @@ To run the quicksort on the list simply call `quickSort(quick, 0, n-1)` where n-
 ### Insertion Sort
 The fifth feature utilizes the Insertion Sort algorithm. Calling the function `feature5(list)`, where list is the unsorted list of integers, returns a sorted list from the insertion sort algorithm.
 
+### Selection Sort
+Selection sort is called using feature3(list), where list is an unsorted list, and returns a sorted list using the Selection sort algorithm in O(n^2) time. 
+
 ## Unit Testing in Python
 [Check the official documentation here](https://docs.python.org/3/library/unittest.html)
 
