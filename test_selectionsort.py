@@ -1,4 +1,4 @@
-from .ListSort import feature3
+from ListSort import feature3
 import unittest
 
 
