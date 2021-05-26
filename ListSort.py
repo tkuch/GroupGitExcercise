@@ -9,6 +9,11 @@ Created on Fri May 21 09:39:36 2021
 
 list = [9, 11, 14, 25, 74, 23, 64, 99, 57, 86]
 
+def printArr(input):
+    for i in range(len(input)):
+        print(input[i], end=' ')
+    return
+
 # Feature #1 - Bubble Sort - Luke
 def feature1(input):
     #feature here
@@ -27,9 +32,47 @@ def feature3(input):
 # Feature #4 - Merge Sort - Tatiana
 def feature4(input):
     #feature here
-    return 
+    if len(input)>1:
+        mid=len(input)//2
+        L=input[:mid]
+        R=input[mid:]
+
+        feature4(L)
+        feature4(R)
+
+      
+
+        merge(input,L,R)
+    return input
+# Helper merge method
+def merge(input,L,R):
+    i=j=k=0
+    while i<len(L) and j<len(R):
+        if L[i]<R[j]:
+            input[k]=L[i]
+            i+=1
+        else:
+            input[k]=R[j]
+            j+=1
+        k+=1
+    while i<len(L):
+        input[k]=L[i]
+        i+=1
+        k+=1
+    while j<len(R):
+        input[k]=R[j]
+        j+=1
+        k+=1
+    return input
 
 # Feature #5 - Insertion Sort - Tasha
 def feature5(input):
     #feature here
     return 
+
+
+# Driver code for merge sort
+mergeArr = feature4(list)
+print("\nSorted array using smerge sort is:", end=' ')
+printArr(mergeArr)
+
