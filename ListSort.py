@@ -79,7 +79,6 @@ def feature3(arr):
 
 # Feature #4 - Merge Sort - Tatiana
 def feature4(input):
-    #feature here
     if len(input)>1:
         mid=len(input)//2
         L=input[:mid]
@@ -87,8 +86,6 @@ def feature4(input):
 
         feature4(L)
         feature4(R)
-
-      
 
         merge(input,L,R)
     return input
@@ -115,7 +112,6 @@ def merge(input,L,R):
 
 # Feature #5 - Insertion Sort - Tasha
 def feature5(input):
-    #feature here
     temp = input
 
     for element in range(1, len(temp)):
@@ -132,31 +128,29 @@ def feature5(input):
         temp[i] = val               # insert value at current index
     return temp                     # return sorted list
 
-
-
 # Driver code for quicksort
 quick = list
 n = len(quick)
 quick = quickSort(quick, 0, n-1)
 print("Sorted array using quicksort is:", end=' ')
-for i in range(n):
-    print(quick[i], end=' ')
+printArr(quick)
 
 # Driver code for insertion sort
 insertionArr = feature5(list)
 print("\nSorted array using insertion sort is:", end=' ')
-for i in range(len(insertionArr)):
-    print(insertionArr[i], end=' ')
+printArr(insertionArr)
 
 # Driver code for selection sort
 selectionArr = feature3(list)
 print("\nSorted array using selection sort is:", end=' ')
-for i in range(len(selectionArr)):
-    print(selectionArr[i], end=' ')
+printArr(selectionArr)
 
 # Driver code for merge sort
 mergeArr = feature4(list)
 print("\nSorted array using merge sort is:", end=' ')
 printArr(mergeArr)
 
-    
+# Driver code for bubble sort
+bubbleArr = bubbleSort(list)
+print("\nSorted array using bubble sort is:", end=' ')
+printArr(bubbleArr)
